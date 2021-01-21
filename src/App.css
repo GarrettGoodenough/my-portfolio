@@ -1,10 +1,19 @@
 :root {
   --primary-white: #fff;
   --primary-color: #0bc4f0;
+  --secondary-color: #4fd7f0;
   --primary-dark: rgba(255, 255, 255, 0);
 }
 
 /*************** NavBar **********************/
+
+nav {
+  z-index: 2;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
 
 .navbar {
   padding: 1.5rem 2rem !important;
@@ -13,6 +22,12 @@
 .navbar-brand {
   font-family: "Lobster", sans-serif;
   color: var(--primary-color) !important;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    width: 7rem;
+  }
 }
 
 .nav a.nav-link {
@@ -36,4 +51,81 @@
 .nav-link:active,
 .nav-link:hover {
   border-top: 0.1875rem solid var(--primary-color);
+}
+
+/*************** Header **********************/
+.header-wrapper {
+  position: relative;
+  background: url(main-bg-1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  z-index: 1;
+}
+
+.main-info h1 {
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+/***** TYPE TEXT *****/
+
+.typed-text {
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+
+@media (max-width: 768px) {
+  .main-info h1 {
+    font-size: 1.7rem !important;
+  }
+  .typed-text {
+    font-size: 1.3rem !important;
+  }
+}
+
+/***** HEADER MAIN OFFER BUTTON *****/
+
+.btn-main-offer {
+  border: 1px solid var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin: 2rem;
+}
+
+.btn-main-offer:hover {
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: black;
+  transition: 0.2s ease-in-out;
+}
+/***** PARTICLES JS *****/
+
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .particles-canvas {
+    display: none;
+  }
 }
