@@ -1,5 +1,39 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+:root {
+  --primary-white: #fff;
+  --primary-color: #0bc4f0;
+  --primary-dark: rgba(255, 255, 255, 0);
+}
+
+/*************** NavBar **********************/
+
+.navbar {
+  padding: 1.5rem 2rem !important;
+}
+
+.navbar-brand {
+  font-family: "Lobster", sans-serif;
+  color: var(--primary-color) !important;
+}
+
+.nav a.nav-link {
+  letter-spacing: 0.0375px;
+  cursor: pointer;
+}
+
+.nav ul li {
+  text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: var(--primary-white) !important;
+  border-top: 0.1875rem solid var(--primary-dark);
+}
+
+.nav-link:active,
+.nav-link:hover {
+  border-top: 0.1875rem solid var(--primary-color);
 }
