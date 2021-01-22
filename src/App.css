@@ -2,7 +2,15 @@
   --primary-white: #fff;
   --primary-color: #0bc4f0;
   --secondary-color: #4fd7f0;
-  --primary-dark: rgba(255, 255, 255, 0);
+  --primary-black: #000000;
+  --primary-dark: #343a41;
+  --primary-gray: #808080;
+  --primary-light-gray: rgb(236, 233, 233);
+  --primary-green: lightgreen;
+}
+
+body {
+  font-family: "Robot Condensed", sans-serif !important;
 }
 
 /*************** NavBar **********************/
@@ -49,17 +57,18 @@ body {
 }
 
 .nav-link:active,
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
   border-top: 0.1875rem solid var(--primary-color);
 }
 
 /*************** Header **********************/
 .header-wrapper {
   position: relative;
-  background: url(main-bg-1.jpg);
+  background: url(./images/main-bg-1.jpg);
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .main-info {
@@ -73,7 +82,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Roboto Condensed", sans-serif;
   z-index: 1;
 }
 
@@ -102,10 +110,10 @@ body {
 
 .btn-main-offer {
   border: 1px solid var(--primary-color);
-  color: var(--secondary-color);
+  background: transparent;
+  color: var(--primary-white);
   border-radius: 0;
   padding: 0.625rem 0.75rem 0.75rem 0.75rem;
-  color: var(--primary-white);
   margin: 2rem;
 }
 
@@ -128,4 +136,256 @@ body {
   .particles-canvas {
     display: none;
   }
+}
+
+/******************** ABOUT ME **************************************/
+.profile_img {
+  width: 20rem;
+  border-radius: 50%;
+  padding: 0.3rem;
+  border: 2px solid var(--secondary-color);
+}
+
+.photo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-heading {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 468px) {
+  .profile_img {
+    width: 10rem;
+  }
+}
+
+/******************** PORTFOLIO **************************************/
+.portfolio-wrapper {
+  background: var(--primary-light-gray);
+  padding: 3rem 0;
+}
+
+.portfolio-wrapper h1 {
+  color: var(--secondary-color);
+}
+
+.portfolio-img {
+  width: 15rem;
+  border: 1px solid var(--secondary-color);
+  padding: 0 0.5rem;
+}
+
+.portfolio-image-box {
+  position: relative;
+  margin: 1rem;
+}
+
+/******************** OVERFLOW **************************************/
+
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: var(--primary-black);
+  width: 15rem;
+  height: 8rem;
+  top: 0;
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+}
+
+.portfolio-image-box:hover .overflow {
+  opacity: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio-icon {
+  position: absolute;
+  opacity: 0;
+  margin-left: -8rem;
+  margin-top: 3.6rem;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.portfolio-image-box:hover .portfolio-icon {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/******************** OVERFLOW BOX **************************************/
+
+.portfolio-image-popupbox {
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+.hyper-link {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.hyper-link:hover {
+  color: var(--secondary-color);
+}
+
+/******************** MEDIA **************************************/
+@media (max-height: 500px) {
+  .popupbox-wrapper {
+    height: 100%;
+  }
+
+  .portfolio-image-popupbox {
+    width: 60%;
+  }
+}
+
+@media (max-height: 280px) {
+  .popupbox-wrapper {
+    height: 90%;
+  }
+
+  .portfolio-image-popupbox {
+    width: 30%;
+  }
+}
+
+/******************** CONTACT **************************************/
+
+.contact {
+  background-color: var(--primary-dark);
+  padding: 3rem 0;
+}
+
+.contact h1 {
+  color: var(--secondary-color);
+  padding: 1.3rem 0;
+  text-transform: uppercase;
+}
+
+.contact p {
+  color: var(--primary-light-gray);
+}
+
+/**************************** INPUTs *************************************/
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  resize: none;
+  border: 0;
+  border-bottom: 0.125rem solid var(--primary-gray);
+  border-radius: 0;
+  color: var(--primary-color);
+  outline: 0 !important;
+  box-shadow: none !important;
+  margin-bottom: 1rem;
+  padding-left: 0 !important;
+}
+
+.contact .container {
+  padding: 4rem 0;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  background: transparent;
+  color: var(--primary-color);
+  border-bottom: 0.125rem solid var(--primary-dark);
+}
+
+.contact textarea {
+  height: 12.2rem !important;
+}
+
+.contact-btn {
+  margin: 1rem 0 0 0;
+  width: 100%;
+  background: none;
+  color: var(--primary-light-gray);
+}
+
+.line {
+  position: relative;
+  top: -2rem;
+  width: 0;
+  height: 0.125rem;
+  background: var(--primary-color);
+  display: inline-block;
+}
+
+input:focus + .line,
+textarea:focus + .line {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+input.form-control {
+  margin: -0.3 0;
+}
+
+textarea.form-control {
+  margin: -0.3 0;
+}
+
+.error-message {
+  color: var(--primary-dark-gray);
+  background: var(--secondary-color);
+  text-align: left;
+}
+
+.success-message {
+  font-weight: 900;
+  color: var(--primary-green);
+}
+
+/**************************** MEDIA *************************************/
+
+@media (max-width: 786px) {
+  .contact {
+    overflow-x: hidden;
+  }
+
+  .contact .container {
+    padding: 0 1rem;
+  }
+
+  .contact p {
+    padding: 0 0.4rem;
+  }
+}
+
+/**************************** FOOTER *************************************/
+
+.footer {
+  background: var(--primary-black);
+  color: var(--primary-gray);
+  padding: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--primary-gray);
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.footer p {
+  margin-bottom: 0;
 }
