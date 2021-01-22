@@ -3,7 +3,7 @@
   --primary-color: #0bc4f0;
   --secondary-color: #4fd7f0;
   --primary-black: #000000;
-  --primary-dark: rgb(68, 68, 68);
+  --primary-dark: #343a41;
   --primary-gray: #808080;
   --primary-light-gray: rgb(236, 233, 233);
   --primary-green: lightgreen;
@@ -57,7 +57,8 @@ body {
 }
 
 .nav-link:active,
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
   border-top: 0.1875rem solid var(--primary-color);
 }
 
@@ -67,7 +68,7 @@ body {
   background: url(./images/main-bg-1.jpg);
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .main-info {
@@ -109,7 +110,8 @@ body {
 
 .btn-main-offer {
   border: 1px solid var(--primary-color);
-  background-color: var(--primary-color);
+  background: transparent;
+  color: var(--primary-white);
   border-radius: 0;
   padding: 0.625rem 0.75rem 0.75rem 0.75rem;
   margin: 2rem;
@@ -363,4 +365,27 @@ textarea.form-control {
   .contact p {
     padding: 0 0.4rem;
   }
+}
+
+/**************************** FOOTER *************************************/
+
+.footer {
+  background: var(--primary-black);
+  color: var(--primary-gray);
+  padding: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--primary-gray);
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.footer p {
+  margin-bottom: 0;
 }
