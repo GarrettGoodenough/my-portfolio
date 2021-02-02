@@ -185,9 +185,26 @@ body {
   padding: 0 0.5rem;
 }
 
+.mern-img {
+  width: 15rem;
+  height: 8rem;
+  border: 1px solid var(--secondary-color);
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+}
+
 .portfolio-image-box {
   position: relative;
-  margin: 1rem;
+  margin: 0 1rem 2rem 1rem;
+}
+
+.mern {
+  margin-top: -0.8rem;
+}
+
+.portfolio-description {
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
 /******************** OVERFLOW **************************************/
@@ -197,13 +214,23 @@ body {
   opacity: 0;
   background: var(--primary-black);
   width: 15rem;
-  height: 8rem;
+  height: 7.8rem;
   top: 0;
   border: 1px solid var(--secondary-color);
   cursor: pointer;
 }
 
 .portfolio-image-box:hover .overflow {
+  opacity: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+.mern .overflow {
+  margin-top: 1rem;
+  height: 8rem;
+}
+
+.mern:hover .overflow {
   opacity: 60%;
   transition: 0.3s ease-in-out;
 }
@@ -223,30 +250,44 @@ body {
   cursor: pointer;
 }
 
+.popupbox-wrapper {
+  margin-top: 6rem;
+  max-width: 80%;
+}
+
 /******************** OVERFLOW BOX **************************************/
 
 .portfolio-image-popupbox {
-  width: 100%;
-  padding: 0 0.5rem;
+  width: 45rem;
+  padding: 0 1rem;
+}
+
+.portfolio-image-popupbox p {
+  text-align: center;
 }
 
 .hyper-link {
   cursor: pointer;
-  color: var(--primary-color);
+  color: (var(--primary-dark));
 }
 
 .hyper-link:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /******************** MEDIA **************************************/
-@media (max-height: 500px) {
+@media (max-width: 768px) {
+  .portfolio-image-popupbox {
+    width: 100%;
+  }
+}
+
+@media (max-height: 570px) {
   .popupbox-wrapper {
     height: 100%;
   }
-
   .portfolio-image-popupbox {
-    width: 60%;
+    width: 50%;
   }
 }
 
@@ -254,7 +295,6 @@ body {
   .popupbox-wrapper {
     height: 90%;
   }
-
   .portfolio-image-popupbox {
     width: 30%;
   }
