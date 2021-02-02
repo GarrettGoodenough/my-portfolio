@@ -12,10 +12,11 @@ const AboutMe = () => {
         <div className="col-lg-6 col-xm-12">
           <h1 className="about-heading">About Me</h1>
           <p>
-            I have a passion for programming and developing tools. I'm hungry
-            for knowledge and new experiences. I have experience in HTML, CSS,
-            Javascript, GSAP, jQuery, Bootstrap, node.js, and React. If you want
-            beautiful websites to stun your customers, I'm your programmer.
+            My name is Garrett Goodenough. I have a passion for programming and
+            developing tools. I'm hungry for knowledge and new experiences. I
+            have experience in HTML, SASS, Javascript, GSAP, jQuery, Bootstrap,
+            node.js, React and much more! Please reach out for any web
+            development needs.
           </p>
         </div>
       </div>

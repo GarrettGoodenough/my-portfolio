@@ -70,11 +70,11 @@ const Portfolio = () => {
         <b>Demo: </b>
         <a
           className="hyper-link"
-          href="https://guarded-chamber-32196.herokuapp.com/"
+          href="https://goodenough-real-estate.netlify.app/"
           target="_blank"
           rel="noreferrer"
         >
-          https://guarded-chamber-32196.herokuapp.com/
+          https://goodenough-real-estate.netlify.app/
         </a>
         <br />
         <b>GitHub: </b>
@@ -116,11 +116,11 @@ const Portfolio = () => {
         <b>Demo: </b>
         <a
           className="hyper-link"
-          href="https://serene-stream-07774.herokuapp.com/"
+          href="https://goodenough-wildfire-tracker.netlify.app/"
           target="_blank"
           rel="noreferrer"
         >
-          https://serene-stream-07774.herokuapp.com/
+          https://goodenough-wildfire-tracker.netlify.app/
         </a>
         <br />
         <b>GitHub: </b>
@@ -169,7 +169,7 @@ const Portfolio = () => {
             />
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
-            <p className="portfolio-description">React & React Router</p>
+            <p className="portfolio-description">React</p>
           </div>
           <div className="portfolio-image-box" onClick={openPopupboxWildfire}>
             <img
