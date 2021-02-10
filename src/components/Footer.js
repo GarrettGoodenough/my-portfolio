@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-6">
             <div className="d-flex">
-              <p>Address</p>
+              <p>Located in Los Angeles, California</p>
             </div>
             <div className="d-flex">
               <a href="tel:8184009601">818-400-9601</a>

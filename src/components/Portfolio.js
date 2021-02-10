@@ -44,7 +44,25 @@ const Portfolio = () => {
       </>
     );
     PopupboxManager.open({ content });
+    PopupboxManager.update({
+      content,
+      config: {
+        titleBar: {
+          text: "Memories Project",
+        },
+      },
+    });
   };
+
+  const popupboxConfigMemores = {
+    titleBar: {
+      enable: true,
+      text: "Memories Project",
+    },
+    fadeIn: true,
+    fadeInSpeed: 500,
+  };
+
   /******************************** Koh Samui *******************************************/
   const openPopupboxKohSamui = () => {
     const content = (
@@ -79,6 +97,14 @@ const Portfolio = () => {
       </>
     );
     PopupboxManager.open({ content });
+    PopupboxManager.update({
+      content,
+      config: {
+        titleBar: {
+          text: "Koh Samui Project",
+        },
+      },
+    });
   };
 
   const popupboxConfigKohSamui = {
@@ -125,6 +151,14 @@ const Portfolio = () => {
       </>
     );
     PopupboxManager.open({ content });
+    PopupboxManager.update({
+      content,
+      config: {
+        titleBar: {
+          text: "Real Estate Project",
+        },
+      },
+    });
   };
 
   const popupboxConfigRealEstate = {
@@ -231,6 +265,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+      <PopupboxContainer {...popupboxConfigMemores} />
       <PopupboxContainer {...popupboxConfigKohSamui} />
       <PopupboxContainer {...popupboxConfigRealEstate} />
       <PopupboxContainer {...popupboxConfigWildfireTracker} />
