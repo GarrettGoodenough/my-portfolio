@@ -231,7 +231,7 @@ body {
 }
 
 .mern:hover .overflow {
-  opacity: 60%;
+  opacity: 0.6;
   transition: 0.3s ease-in-out;
 }
 
