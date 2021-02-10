@@ -175,6 +175,10 @@ body {
   padding: 3rem 0;
 }
 
+.protfolio-text {
+  margin-top: 0.5rem;
+}
+
 .portfolio-wrapper h1 {
   color: var(--secondary-color);
 }

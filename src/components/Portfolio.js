@@ -1,6 +1,7 @@
 import kohSamui from "../images/koh-samui.png";
 import wildFireTracker from "../images/wildfire-tracker.png";
 import realEstate from "../images/real-estate.png";
+import memories from "../images/memories.png";
 // FONT AWESOME IMPORT
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
@@ -9,6 +10,41 @@ import { PopupboxManager, PopupboxContainer } from "react-popupbox";
 import "react-popupbox/dist/react-popupbox.css";
 
 const Portfolio = () => {
+  /******************************** Memores *******************************************/
+  const openPopupboxMemories = () => {
+    const content = (
+      <>
+        <img
+          className="portfolio-image-popupbox"
+          src={memories}
+          alt="Memories Application"
+        />
+        <p className="protfolio-text">
+          Web application developed using MongoDB, Express, Node.js, and React
+        </p>
+        <b>Demo: </b>
+        <a
+          className="hyper-link"
+          href="https://goodenough-memories-app.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          https://goodenough-memories-app.netlify.app/
+        </a>
+        <br />
+        <b>GitHub:</b>{" "}
+        <a
+          className="hyper-link"
+          href="https://github.com/GarrettGoodenough/mern-memories"
+          target="_blank"
+          rel="noreferrer"
+        >
+          https://github.com/GarrettGoodenough/mern-memories
+        </a>
+      </>
+    );
+    PopupboxManager.open({ content });
+  };
   /******************************** Koh Samui *******************************************/
   const openPopupboxKohSamui = () => {
     const content = (
@@ -151,6 +187,18 @@ const Portfolio = () => {
       <div className="container">
         <h1 className="text-uppercase text-center py-5">Portfolio</h1>
         <div className="image-box-wrapper row justify-content-center">
+          <div className="portfolio-image-box" onClick={openPopupboxMemories}>
+            <img
+              className="portfolio-img"
+              src={memories}
+              alt="Full Stack M.E.R.N. Application"
+            />
+            <div className="overflow"></div>
+            <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
+            <p className="portfolio-description">
+              Full Stack M.E.R.N. Application
+            </p>
+          </div>
           <div className="portfolio-image-box" onClick={openPopupboxKohSamui}>
             <img
               className="portfolio-img"
