@@ -121,11 +121,11 @@ const Contact = () => {
                 />
                 <div className="line"></div>
               </div>
-            </div>
-            <div className="col-md-6 col-xs-12">
               <span className="error-message">
                 {errors.subject && errors.subject.message}
               </span>
+            </div>
+            <div className="col-md-6 col-xs-12">
               {/* DESCRIPTION */}
               <div className="text-center">
                 <textarea
