@@ -1,7 +1,7 @@
-import kohSamui from "../images/koh-samui.png";
-import wildFireTracker from "../images/wildfire-tracker.png";
-import realEstate from "../images/real-estate.png";
-import memories from "../images/memories.png";
+import kohSamui from "../images/koh-samui-min.png";
+import wildFireTracker from "../images/wildfire-tracker-min.png";
+import realEstate from "../images/real-estate-min.png";
+import memories from "../images/memories-min.png";
 // FONT AWESOME IMPORT
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
